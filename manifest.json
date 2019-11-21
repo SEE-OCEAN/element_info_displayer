@@ -1,0 +1,22 @@
+{
+  "name": "element_info_displayer",
+  "version": "1.0.0",
+  "manifest_version": 2, //chrome要求
+  "description": "跟随鼠标显示dom元素的常用信息",
+  "content_scripts": [{
+    "js": ["js/app.js"],
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "run_at": "document_start"
+  }],
+  "browser_action": {
+    "default_title": "跟随鼠标显示dom元素的常用信息",
+    "default_popup": "html/explain.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
